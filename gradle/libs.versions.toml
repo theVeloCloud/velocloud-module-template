@@ -1,17 +1,17 @@
 [versions]
 kotlin = "2.3.0"
 
-polocloud = "3.0.0-pre.8-SNAPSHOT"
+velocloud = "3.0.0-pre.8-SNAPSHOT"
 
 log4j = "2.25.3"
 
 [libraries]
-polocloud-shared =  { group = "dev.httpmarco.polocloud", name = "shared", version.ref = "polocloud" }
-polocloud-agent =  { group = "dev.httpmarco.polocloud", name = "agent", version.ref = "polocloud" }
-polocloud-common =  { group = "dev.httpmarco.polocloud", name = "common", version.ref = "polocloud" }
-polocloud-proto =  { group = "dev.httpmarco.polocloud", name = "proto", version.ref = "polocloud" }
+velocloud-shared =  { group = "de.snenjih.velocloud", name = "shared", version.ref = "velocloud" }
+velocloud-agent =  { group = "de.snenjih.velocloud", name = "agent", version.ref = "velocloud" }
+velocloud-common =  { group = "de.snenjih.velocloud", name = "common", version.ref = "velocloud" }
+velocloud-proto =  { group = "de.snenjih.velocloud", name = "proto", version.ref = "velocloud" }
 
 log4j-api = { group = "org.apache.logging.log4j", name = "log4j-api", version.ref = "log4j" }
 
 [plugins]
-polocloud-module = { id = "dev.httpmarco.polocloud.module", version.ref = "polocloud" }
+velocloud-module = { id = "de.snenjih.velocloud.module", version.ref = "velocloud" }

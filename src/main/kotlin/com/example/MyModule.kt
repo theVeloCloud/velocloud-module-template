@@ -1,14 +1,14 @@
 package com.example
 
-import dev.httpmarco.polocloud.agent.Agent
-import dev.httpmarco.polocloud.shared.events.definitions.service.ServiceChangeStateEvent
-import dev.httpmarco.polocloud.shared.module.PolocloudModule
+import de.snenjih.velocloud.agent.Agent
+import de.snenjih.velocloud.shared.events.definitions.service.ServiceChangeStateEvent
+import de.snenjih.velocloud.shared.module.VelocloudModule
 import org.apache.logging.log4j.LogManager
 import org.apache.logging.log4j.Logger
 
 val logger: Logger = LogManager.getLogger()
 
-class MyModule : PolocloudModule {
+class MyModule : VelocloudModule {
 
     override fun onEnable() {
         // Here you can add your module's initialization logic

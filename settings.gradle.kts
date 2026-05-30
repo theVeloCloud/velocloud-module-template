@@ -6,4 +6,4 @@ pluginManagement {
     }
 }
 
-rootProject.name = "polocloud-module-template"
+rootProject.name = "velocloud-module-template"

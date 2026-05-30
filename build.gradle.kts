@@ -1,20 +1,20 @@
-import dev.httpmarco.polocloud.module.gradle.LoadOrder
+import de.snenjih.velocloud.module.gradle.LoadOrder
 
 plugins {
     kotlin("jvm") version libs.versions.kotlin.get()
-    alias(libs.plugins.polocloud.module)
+    alias(libs.plugins.velocloud.module)
 }
 
-group = "dev.polocloud.example"
+group = "dev.velocloud.example"
 version = "1.0.0"
 
-polocloudModule {
+velocloudModule {
     id = "example-module" // Unique identifier for the module (e.g., "example-module"). This should be lowercase with hyphens.
     version = project.version.toString() // Version of the module (e.g., "1.0.0" or "1.0.0-SNAPSHOT"). This should follow semantic versioning.
     moduleName = "Example Module" // Human-readable name of the module (e.g., "Example Module").
     description = "A module that does cool things" // Description of what the module does.
     author = "YourName" // Author of the module.
-    mainClass = "com.example.MyModule" // Fully qualified main class that implements PolocloudModule.
+    mainClass = "com.example.MyModule" // Fully qualified main class that implements VelocloudModule.
 
     // Optional
     loadOrder = LoadOrder.STARTUP // Load order of the module. Valid values: STARTUP, POST_STARTUP, LATE; Default: STARTUP
@@ -26,18 +26,18 @@ repositories {
     mavenLocal()
     mavenCentral()
     maven {
-        name = "polocloud-snapshots"
-        url = uri("https://central.sonatype.com/repository/maven-snapshots/")
+        name = "velocloud-snapshots"
+        url = uri("https://repo.snenjih.de/snapshots")
     }
 }
 
 dependencies {
     compileOnly(libs.log4j.api)
 
-    compileOnly(libs.polocloud.shared)
-    implementation(libs.polocloud.agent)
-    compileOnly(libs.polocloud.common)
-    compileOnly(libs.polocloud.proto)
+    compileOnly(libs.velocloud.shared)
+    implementation(libs.velocloud.agent)
+    compileOnly(libs.velocloud.common)
+    compileOnly(libs.velocloud.proto)
 }
 
 kotlin {
