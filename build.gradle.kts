@@ -18,7 +18,7 @@ velocloudModule {
 
     // Optional
     loadOrder = LoadOrder.STARTUP // Load order of the module. Valid values: STARTUP, POST_STARTUP, LATE; Default: STARTUP
-    apiVersion = ">=3.0.0-pre.8-SNAPSHOT" // API version this module was built for. Default: >=3.0.0-pre.8-SNAPSHOT
+    apiVersion = ">=3.0.7" // API version this module was built for. Default: >=3.0.7
 
 }
 
